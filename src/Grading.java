@@ -3,8 +3,10 @@ public class Grading {
 	
 	public static void main(String[] args) {
 		
+		System.out.println("start");
+		
 		if(args.length!=10){
-			System.out.println("Á¤´äÀÇ °³¼ö°¡ ¸ÂÁö ¾Ê½À´Ï´Ù.");
+			System.out.println("ì •ë‹µì˜ ê°œìˆ˜ê°€ ë§ì§€ ì•ŠìŠµë‹ˆë‹¤.");
 			return;
 		}
 		
@@ -12,24 +14,24 @@ public class Grading {
 						{3,2,4,2,2,1,1,3,4,1},
 						{2,4,3,2,1,2,1,3,3,4},
 						{2,3,3,1,1,3,2,2,4,4},
-						{3,1,1,2,4,1,2,3,1,3}};	//ÇĞ»ıÀÌ Á¦ÃâÇÑ ´ä
-		int dap[]=new int[10]; // ¹®Á¦¿¡ ´ëÇÑ ´ä
-		double score[]={10.5, 10, 9.8, 9.2, 10.5, 9, 9.5, 9.5, 10.2, 10.8}; // ÇÑ ¹®Á¦ ´ç Á¡¼ö
-		double sum[]={0,0,0,0,0}; // Á¡¼ö ÃÑ ÇÕ
+						{3,1,1,2,4,1,2,3,1,3}};	//í•™ìƒì´ ì œì¶œí•œ ë‹µ
+		int dap[]=new int[10]; // ë¬¸ì œì— ëŒ€í•œ ë‹µ
+		double score[]={10.5, 10, 9.8, 9.2, 10.5, 9, 9.5, 9.5, 10.2, 10.8}; // í•œ ë¬¸ì œ ë‹¹ ì ìˆ˜
+		double sum[]={0,0,0,0,0}; // ì ìˆ˜ ì´ í•©
 		
 		for(int a=0; a<args.length; a++){
-			dap[a]=Integer.parseInt(args[a]); // ¸í·ÉÇà¸Å°³º¯¼ö -> dap¹è¿­¿¡ ³Ö±â
+			dap[a]=Integer.parseInt(args[a]); // ëª…ë ¹í–‰ë§¤ê°œë³€ìˆ˜ -> dapë°°ì—´ì— ë„£ê¸°
 		}
 		
 		for(int i=0; i<student.length; i++){
 			for(int j=0; j<student[i].length; j++){
-				if(dap[j] == student[i][j]){ //´ä°ú ÇĞ»ıÀÌ Á¦ÃâÇÑ ´ä°ú ¸Â´ÂÁö
-					sum[i]+=score[j]; //¸ÂÀ¸¸é j¹øÂ°¿¡ ÇØ´çÇÏ´Â Á¡¼ö ºÎ¿©
-					System.out.print("o\t"); //Á¡¿ÀÇ¥ o
+				if(dap[j] == student[i][j]){ //ë‹µê³¼ í•™ìƒì´ ì œì¶œí•œ ë‹µê³¼ ë§ëŠ”ì§€
+					sum[i]+=score[j]; //ë§ìœ¼ë©´ jë²ˆì§¸ì— í•´ë‹¹í•˜ëŠ” ì ìˆ˜ ë¶€ì—¬
+					System.out.print("o\t"); //ì ì˜¤í‘œ o
 				}
-				else System.out.print("x\t"); //Æ²¸±°æ¿ì Á¡¿ÀÇ¥ x
+				else System.out.print("x\t"); //í‹€ë¦´ê²½ìš° ì ì˜¤í‘œ x
 			}
-			System.out.println("ÇĞ»ı" + (i+1) + "ÀÇ Á¡¼ö : " + sum[i] + "Á¡");
+			System.out.println("í•™ìƒ" + (i+1) + "ì˜ ì ìˆ˜ : " + sum[i] + "ì ");
 		}
 		
 	}
